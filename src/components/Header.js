@@ -1,16 +1,23 @@
-import React, { Component } from 'react';
-import {  Link } from "react-router-dom"
-import { Menu, Icon } from 'antd';
+import React, {
+  Component
+} from 'react';
+import {
+  Link
+} from "react-router-dom"
+import {
+  Menu,
+  Icon
+} from 'antd';
 class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      page:'header'
-     };
+    this.state = {
+      page: 'header'
+    };
   }
   render() {
     return (
-    	<Menu  mode="horizontal">
+      <Menu  mode="horizontal">
     	 <Menu.Item key="home">
           <Link to="/"> <Icon type="home" />首页</Link>
         </Menu.Item>
@@ -20,19 +27,10 @@ class Header extends Component {
          <Menu.Item key="pro">
           <Link to="/product"><Icon type="account-book" />产品</Link>
         </Menu.Item>
+          <Menu.Item key="user">
+          <Link to="/user"><Icon type="account-book" />个人中心</Link>
+        </Menu.Item>
     	</Menu>
-    	
-//    <ul  className="nav_list">
-//	      <li>
-//	        <Link to="/">首页</Link>
-//	      </li>
-//	      <li>
-//	        <Link to="/news">新闻</Link>
-//	      </li>
-//	       <li>
-//	        <Link to="/product">产品</Link>
-//	      </li>
-//  </ul>
     );
   }
 }
